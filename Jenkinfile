@@ -1,0 +1,34 @@
+
+pipeline {
+    agent any
+    stages {
+        stage('Stage 1') {
+            steps {
+               sh 'touch multiple.txt'
+            }
+        }
+        stage('Stage 2') {
+            steps { 
+                sh 'echo "Hello" > multiple.txt'
+            }
+        }
+        stage('Stage 3') {
+            steps { 
+                sh 'echo "Jenkins" >> multiple.txt'
+               
+            }
+        }
+        stage('Stage 4') {
+            steps { 
+                sh 'echo "Workspace" >> multiple.txt'
+               
+            }
+        }
+        stage('Stage 5') {
+            steps { 
+                sh 'cat multiple.txt'
+               
+            }
+        }
+    }
+}
