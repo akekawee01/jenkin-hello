@@ -21,7 +21,7 @@ pipeline {
                     for (int i = 0; i < browsers.size(); ++i) {
                         echo "Testing the ${browsers[i]} browser"
                     }
-                    if (${params.CHOICE} == "odd"){
+                    if (params.CHOICE == "odd"){
                       echo "Any integer that cannot be divided exacly by 2 is odd number."
                     } 
                     else {
@@ -34,8 +34,8 @@ pipeline {
 
         stage('Stage 2') {
             when {
-                expression{ ${params.CHOICE == 'even' }
-            }}
+                expression{ params.CHOICE == 'even' }
+            }
             steps {
                 echo 'stage 2'
             }
@@ -44,7 +44,7 @@ pipeline {
 
 
         stage('Stage 3') {
-            when { expression{ ${params.CHOICE == 'odd' } } }
+            when { expression{ params.CHOICE == 'odd' } } 
             steps {
                 echo 'stage 3'
             }
