@@ -75,12 +75,15 @@ pipeline {
         }
         
 
-        post { 
+     
+
+        
+    }
+
+
+       post { 
         always { 
             echo 'End Job!'
         }
-    }
-
-        
     }
 }
