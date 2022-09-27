@@ -40,6 +40,7 @@ pipeline {
                 echo 'stage 2'
             }
         }
+        }
 
 
          stage('Stage 3') {
