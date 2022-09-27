@@ -29,7 +29,7 @@ pipeline {
                     }
 
             }
-            }
+        }
         }
 
         stage('Stage 2') {
@@ -43,11 +43,7 @@ pipeline {
 
 
          stage('Stage 3') {
-            when {
-
-					      expression{ ${params.CHOICE == 'odd' }
-
-            }
+            when { expression{ ${params.CHOICE == 'odd' } } }
             steps {
                 echo 'stage 3'
             }
@@ -57,7 +53,7 @@ pipeline {
          stage('Stage 4') {
             when {
 
-					      expression{ ${params.CHOICE == 'even' }
+					      expression{ ${params.CHOICE == 'even' } }
 
             }
             steps {
@@ -86,7 +82,4 @@ pipeline {
 
         
     }
-}
-
-        }
 }
