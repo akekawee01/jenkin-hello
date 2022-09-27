@@ -30,6 +30,7 @@ pipeline {
 
             }
         }
+        }
         stage('Stage 2') {
             when {
 
@@ -51,7 +52,7 @@ pipeline {
                 echo 'stage 3'
             }
         }
-        
+         }
          stage('Stage 4') {
             when {
 
@@ -62,7 +63,7 @@ pipeline {
                 echo 'stage 4'
             }
         }
-        
+         }
         stage('Stage 5') {
             when {
 
@@ -73,7 +74,7 @@ pipeline {
                 echo 'stage 5'
             }
         }
-        
+        }
         post { 
         always { 
             echo 'End Job!'
