@@ -34,8 +34,8 @@ pipeline {
 
         stage('Stage 2') {
             when {
-		expression{ ${params.CHOICE == 'even' }
-            }
+		        expression{ ${params.CHOICE == 'even' }
+            }}
             steps {
                 echo 'stage 2'
             }
