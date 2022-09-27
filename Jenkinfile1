@@ -40,10 +40,10 @@ pipeline {
                 echo 'stage 2'
             }
         }
-        }
+        
 
 
-         stage('Stage 3') {
+        stage('Stage 3') {
             when { expression{ ${params.CHOICE == 'odd' } } }
             steps {
                 echo 'stage 3'
