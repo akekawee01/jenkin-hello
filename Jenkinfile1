@@ -1,10 +1,9 @@
 pipeline {
+
     agent any
     
      parameters {
-
         choice(name: 'CHOICE', choices: ['odd', 'even'], description: 'Pick something')
-
     }
 
     environment { 
@@ -13,6 +12,7 @@ pipeline {
   
 
     stages {
+        
         stage('Stage 1') {
             steps {
             
@@ -31,6 +31,7 @@ pipeline {
             }
         }
         }
+
         stage('Stage 2') {
             when {
 
@@ -41,7 +42,9 @@ pipeline {
                 echo 'stage 2'
             }
         }
-        
+        }
+
+
          stage('Stage 3') {
             when {
 
@@ -53,6 +56,7 @@ pipeline {
             }
         }
          }
+
          stage('Stage 4') {
             when {
 
@@ -64,6 +68,7 @@ pipeline {
             }
         }
          }
+
         stage('Stage 5') {
             when {
 
@@ -75,6 +80,7 @@ pipeline {
             }
         }
         }
+        
         post { 
         always { 
             echo 'End Job!'
